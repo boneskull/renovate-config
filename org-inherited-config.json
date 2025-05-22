@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":enableVulnerabilityAlerts",
+    ":semanticCommits",
+    "group:linters",
+    "group:definitelyTyped",
+    "npm:unpublishSafe",
+    "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    ":automergeDigest",
+    ":automergeMinor"
+  ],
+  "labels": ["dependencies"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/test/**",
+    "**/demo/**",
+    "**/example*/**"
+  ]
+}
